@@ -8,6 +8,7 @@
 // @grant        GM_xmlhttpRequest
 // @grant        GM_setValue
 // @grant        GM_getValue
+// @updateURL hhttps://github.com/CYBERTHREATANALYSIS/CIH_monitor_button/raw/main/monitorbutton.user.js
 // ==/UserScript==
 
 (function() {
