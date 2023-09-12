@@ -10,8 +10,6 @@
 // @grant        GM_getValue
 // @updateURL https://raw.githubusercontent.com/CYBERTHREATANALYSIS/CIH_monitor_button/main/monitorbutton.user.js
 // @downloadURL https://raw.githubusercontent.com/CYBERTHREATANALYSIS/CIH_monitor_button/main/monitorbutton.user.js
-
-// @updateURL hhttps://github.com/CYBERTHREATANALYSIS/CIH_monitor_button/raw/main/monitorbutton.user.js
 // ==/UserScript==
 
 (function() {
