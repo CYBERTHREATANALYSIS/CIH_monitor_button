@@ -6,10 +6,21 @@
 // @author       Milo Salvia CTA
 // @match        https://dashboard.cyberintelligence.house/assessments/*
 // @grant        GM_xmlhttpRequest
+// @grant        GM_setValue
+// @grant        GM_getValue
 // ==/UserScript==
 
 (function() {
     'use strict';
+
+    // Retrieve the API key from storage
+    let apiKey = GM_getValue('apiKey');
+
+    // If the API key is not found in storage, prompt the user to enter it
+    if (!apiKey) {
+        apiKey = prompt('Please enter your API key:');
+        GM_setValue('apiKey', apiKey);  // Store the API key for future use
+    }
 
     // If the flag is not set in sessionStorage, set it and refresh the page
     if (!sessionStorage.getItem('buttonAdded')) {
@@ -46,7 +57,7 @@
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded",
                     "Accept": "application/json",
-                    "X-Api-Key": "AS4w1NYXrTI3H50Qy06jc4HoDgQV6L8PpfWgrLzSBfTWoOAN"
+                    "X-Api-Key": apiKey
                 },
                 data: "type=monitoring",
                 onload: function(response) {
